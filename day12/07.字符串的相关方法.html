@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+
+        //创建一个字符串
+        var s = "Hello javascript";
+
+        /**
+         * 在底层字符串是以字符数组的形式保存的
+         * ["H","e","l"]
+         */
+
+        /**
+         *  length属性
+         *  - 可以用来获取字符串的长度
+         */
+
+        // console.log(s.length);
+
+        /**
+         * charAt()
+         * - 可以返回字符串中指定位置的字符
+         * - 根据索引获取指定的字符
+         */
+
+        str = "中Hello Atguigu";
+        var result = str.charAt(0);
+        // console.log(result);
+
+        /**
+         * charCodeAt()
+         * - 获取指定位置字符的字符编码（Unicode编码）
+         */
+
+        result = str.charCodeAt(0);
+        // console.log(result);
+
+
+        /**
+         * String.formCharCode()
+         * - 可以根据字符编码获取字符串
+         */
+
+        result = String.fromCharCode(0x2692);
+
+        // console.log(result);
+
+        /**
+         * concat()
+         * - 可以用来连接两个或者多个字符串
+         * - 作用和 + 一样
+         */
+
+        result = str.concat("你好","再见");
+
+        // console.log(result);
+
+        /**
+         *  indexOf()
+         *  - 改方法可以检索一个字符串中是否含有指定内容
+         *  - 如果字符串中含有改内容，则会返回其第一次出现的索引
+         *      如果没有找到，则会返回-1
+         *  - 可以指定一个第二个参数，指定开始查找的位置
+         *
+         *  lastIndexOf()
+         *  - 改方法和indexOf()一样，
+         *      不同的是indexOf()是从前往后找
+         *      lastIndexOf()是从后往前找
+         *  - 也可以指定开始查找的位置
+         */
+
+        str = "hello hatguigu";
+        // result = str.indexOf("h",1);
+        // result = str.lastIndexOf("h",5);
+        // console.log(result);
+
+        /**
+         * slice()
+         * - 可以从字符串中截取指定的内容
+         * - 不会影响原字符串，而是将截取到的内容返回
+         * - 参数：
+         */
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

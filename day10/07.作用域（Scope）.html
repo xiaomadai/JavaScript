@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+
+        /**
+         * 作用域
+         *  - 作用域值一个变量的作用范围
+         *  - 在JS中有两种作用域
+         *
+         *      1.全局作用域
+         *          - 直接编写在script标签中的代码，都在全局作用域中
+         *          - 全局作用域在页面打开时创建，在页面关闭时销毁
+         *          - 在全局作用域中有一个全局对象windows
+         *               它代表一个浏览器窗口，它由浏览器创建我们可以直接使用
+         *          - 在全局作用域中
+         *              创建的变量都会作为windows对象保存
+         *              创建的函数都会作为windows对象的方法保存
+         *          - 全局作用域中的变量都是全局变量
+         *              在页面的任意的部分都可以访问到
+         *
+         *      2.局部作用域
+         *
+         */
+
+
+        var a = 10;
+
+        var b = 20;
+
+        console.log(window.a);
+
+        function fun() {
+            console.log("fun");
+        }
+
+        window.fun();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

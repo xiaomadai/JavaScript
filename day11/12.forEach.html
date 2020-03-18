@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+
+        /**
+         * 一般我们都是使用for循环去遍历数组
+         *  js 中还为我们提供了一个方法，用来遍历数组
+         *  forEach()
+         *  - 这个方法只支持IE8以上的浏览器
+         *       ie8一下的浏览器均不支持该方法，所以如果需要兼容IE8,则不要使用foreach
+         *        还是使用for循环来遍历
+        */
+
+        //创建一个数组
+        var arr = ["孙悟空","猪八戒","沙和尚","唐僧","白骨精"];
+
+        /**
+         * foreach()方法需要一个函数作为参数
+         *  - 像这种函数，由我们创建但是不由我们调用的，我们称之为回调函数
+         *  - 数组中有几个元素函数就会执行几次，每次执行时，浏览器会将遍历到元素
+         *      一实参的形式传递进来，我们可以来定义形参，来读取这些内容
+         *  - 浏览器会在回调函数中传递三个参数
+         *      第一个参数，就是当前正在遍历的元素
+         *      第二个参数，就是当前正在遍历的元素的索引
+         *      第三个参数，就是正在遍历的数组
+         *
+         */
+
+        arr.forEach(function (value,index,obj) {
+            console.log(value);
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
