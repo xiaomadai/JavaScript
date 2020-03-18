@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="application/javascript">
+
+        /**
+         *  电子邮件
+         *  hello  .nihao          @     abc  .com.cn
+         *
+         *  任意字母数字下划线    .任意字母数字下划线  @   任意字母数字     .任意字母（2-5位）   .任意字母（2-5位）
+         *
+         *  \w{3,}  (\.\w+)* @ [A-z0-9]+ (\.[A-z]{2,5}){1,2}
+         */
+
+        var emailReg = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}$/;
+
+        var email = "abc.hello@163.com";
+
+        console.log(emailReg.test(email));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
