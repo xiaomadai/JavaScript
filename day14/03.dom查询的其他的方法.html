@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>dom查询的其他的方法</title>
+    <script type="text/javascript">
+
+
+        window.onload = function () {
+
+            //获取body标签
+            // var body = document.getElementsByTagName("body")[0];
+
+
+
+            /**
+             * 在document中有一个属性body,它保存的是body的引用
+             */
+            var body = document.body;
+
+            // console.log(body);
+
+            /**
+             * document.documentElement保存的是html跟标签
+             */
+            var html = document.documentElement;
+
+            // console.log(html);
+
+            /**
+             * document.all代表页面中的所有元素
+             */
+            var all = document.all;
+
+            // console.log(all.length);
+
+
+            /*for(var i=0;i<all.length;i++){
+                console.log(all[i]);
+            }*/
+
+            all = document.getElementsByTagName("*");
+            // console.log(all.length);
+
+
+            /**
+             * 根据元素class属性值查询一组元素节点对象
+             *  getElementsByClassName()可以根据class属性值获取一组元素节点对象
+             *  但是该方法不支持ie8及一下的浏览器
+             */
+
+            // var box1 = document.getElementsByClassName("box1");
+            // console.log(box1.length);
+
+            //获取页面中的所有的div
+            // var divs = document.getElementsByTagName("div");
+
+            //获取class为box1中的所有的div
+            //.box1 div
+            /**
+             *  document.querySelector()
+             *  - 需要一个选择器的字符串作为参数，可以根据一个CSS选择器来查询一个元素节点对象
+             *  - 虽然ie8中没有getElementsByClassName()但是可以使用querySelector()代替
+             *  - 使用改方法总会返回唯一的一个元素，如果返回条件的元素有多个，那么它只会返回一个
+             */
+
+            var div = document.querySelector(".box1 div");
+
+            // console.log(div);
+
+            var box1 = document.querySelector(".box1");
+
+            // console.log(div.innerHTML);
+            // console.log(box1.innerHTML);
+
+
+            /**
+             *
+             */
+            box1 = document.querySelectorAll(".box1");
+            box1 = document.querySelectorAll("#box2");
+            console.log(box1);
+
+        }
+    </script>
+</head>
+<body>
+    <div id="box2"></div>
+    <div class="box1">
+        我是第一个box1
+        <div>我是box1中的div</div>
+    </div>
+    <div class="box1">
+        <div>我是box1中的div</div>
+    </div>
+    <div class="box1">
+        <div>我是box1中的div</div>
+    </div>
+    <div class="box1">
+        <div>我是box1中的div</div>
+    </div>
+
+    <div></div>
+</body>
+</html>
