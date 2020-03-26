@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            padding: 50px;
+            border: 10px solid yellow;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            var box1 = document.getElementById("box1");
+            var btn01 = document.getElementById("btn01");
+            var box4 = document.getElementById("box4");
+
+            btn01.onclick = function () {
+
+                /**
+                 * clientWidth
+                 * clientHeight
+                 *  - 这两个属性可以获取元素的可见宽度和高度
+                 *  - 这些属性都是不带px的，返回都是一个数字，可以直接进行计算
+                 *  - 会获取元素宽度和高度，包括内容区和内边距
+                 *  - 这些属性都是只读的，不能修改
+                 */
+
+                // console.log(box1.clientHeight);
+                // console.log(box1.clientWidth);
+                // box1.clientHeight = 100;
+
+                /**
+                 * offsetWidth
+                 * offsetHeight
+                 *  - 获取元素的整个的宽度和高度，包括内容区，内边距和边框
+                 */
+
+                // console.log(box1.offsetWidth);
+
+                /**
+                 * offsetParent
+                 *  - 可以用来获取当前元素的定位元素
+                 *  - 会获取到离当前元素最近的开启了定位的祖先元素
+                 *      如果所有的祖先元素都没有开启定位，则返回body
+                 */
+
+                var op = box1.offsetParent;
+                // console.log(op);
+
+
+                /**
+                 *
+                 */
+            }
+        }
+
+    </script>
+</head>
+<body id = "body">
+    <button id="btn01">点我一下</button>
+    <br /><br />
+
+    <div id="box4">
+        <div id="box5"></div>
+    </div>
+
+
+
+    <br /><br />
+
+    <div id="box3">
+        <div id="box2" style="position: relative;" > <!-- style="position: relative;" -->
+            <div id="box1"></div>
+        </div>
+    </div>
+</body>
+</html>
