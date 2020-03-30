@@ -84,7 +84,7 @@
             })*/
 
            bind(btn,"click",function () {
-                console.log(this);
+                alert(this);
            })
 
         }
@@ -111,6 +111,7 @@
                  *  this 是谁有调用方式决定
                  *  callback.call(obj)
                  */
+                //obj.attachEvent("on"+eventStr,callback);
                 //ie8及以下
                 obj.attachEvent("on"+eventStr,function () {
                     callback.call(obj);
