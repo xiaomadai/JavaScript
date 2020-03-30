@@ -54,36 +54,34 @@
                  *  - 只有ie支持，但是在火狐中调用不会报错，
                  *      而如果使用chrome调用会报错
                  */
-
                 /*if(box1.setCapture){
                     box1.setCapture();
                 }*/
                 obj.setCapture && obj.setCapture();
 
                 event = event || window.event;
-
                 //div的偏移量 鼠标.clientX - 元素.offsetLeft
                 //div的偏移量 鼠标.clientY - 元素.offsetTop
                 var ol = event.clientX - obj.offsetLeft;
                 var ot = event.clientY - obj.offsetTop;
 
-                //为document绑定一个onmouseover
-                document.onmouseover = function (event) {
+                //为document绑定一个onmousemove
+                document.onmousemove = function (event) {
                     event = event || window.event;
                     //当鼠标移动时被拖拽元素跟随鼠标移动 onmousemove
                     //获取鼠标坐标
                     var left = event.clientX - ol;
                     var top = event.clientY - ot;
 
-                    obj.style.left = left +"px";
-                    obj.style.top = top + "px";
+                    obj.style.left = left+"px";
+                    obj.style.top = top+"px";
                 }
 
                 //为document绑定一个鼠标松开事件
                 document.onmouseup = function () {
                     //但鼠标松开时,被托拽元素固定在当前元素， onmouseup
-                    //取消document的onmouseover事件
-                    document.onmouseover = null;
+                    //取消document的onmousemove事件
+                    document.onmousemove = null;
                     //取消document的onmouseup事件
                     document.onmouseup = null;
                     //当鼠标松开时，取消对事件的捕获
@@ -111,6 +109,6 @@
 
     <div id="box2"></div>
 
-    <!--<img src="img/an.jpg" id="img1" style="position: absolute;"/>-->
+    <img src="img/an.jpg" id="img1" style="position: absolute;"/>
 </body>
 </html>
