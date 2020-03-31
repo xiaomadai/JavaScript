@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        /**
+         * History
+         * - 对象可以用来操作浏览器向前或向后翻页
+         */
+
+        window.onload = function () {
+
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+
+                /**
+                 * length
+                 *  - 属性，可以获取到当前访问的链接数量
+                 */
+                //console.log(history.length);
+
+
+                history.back();
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+
+    <h1>History</h1>
+
+    <a href="01.BOM.html">去BOM</a>
+</body>
+</html>
